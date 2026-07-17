@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Mini Machines Controller</title>
+<link rel="stylesheet" href="controller.css">
+</head>
+<body>
+  <!-- JOIN SCREEN: pick name + color -->
+  <div id="join" class="screen">
+    <div class="logo">MINI<br>MACHINES</div>
+    <p class="tag">Balloon Battle</p>
+    <input id="nameInput" class="name-input" maxlength="10" placeholder="your name" autocomplete="off">
+    <div id="colors" class="colors"></div>
+    <button id="joinBtn" class="big-btn">JOIN</button>
+    <p id="status" class="status">connecting…</p>
+    <p class="hint">Tilt to steer · hold to gas · tap to throw</p>
+  </div>
+
+  <!-- PLAY SCREEN -->
+  <div id="play" class="screen hidden">
+    <div class="topbar">
+      <div class="me">
+        <span id="meName" class="me-name">—</span>
+        <span id="meBalloons" class="me-balloons"></span>
+      </div>
+      <div id="leaderboard" class="leaderboard"></div>
+    </div>
+    <div id="roundBanner" class="round-banner hidden"></div>
+
+    <!-- steering: left side drag / tilt -->
+    <div id="steerZone" class="steer-zone">
+      <div id="steerKnob" class="steer-knob"></div>
+      <div class="steer-label">STEER</div>
+    </div>
+
+    <div class="right-stack">
+      <button id="actionBtn" class="action-btn">
+        <span class="item-icon" id="itemIcon"></span>
+        <span class="action-label">USE</span>
+      </button>
+      <button id="brakeBtn" class="brake-btn">BRAKE</button>
+    </div>
+
+    <div id="gasZone" class="gas-zone">
+      <div class="gas-label">GAS</div>
+    </div>
+
+    <div id="dead" class="dead hidden">
+      <div class="dead-title">POPPED!</div>
+      <div class="dead-sub">Next round soon…</div>
+    </div>
+  </div>
+
+<script src="/happyfuntimes/dist/hft.js"></script>
+<script src="controller.js"></script>
+</body>
+</html>

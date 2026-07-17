@@ -1,0 +1,6 @@
+node_modules/
+*.log
+.DS_Store
+.env
+HappyFunTimes/node_modules/
+minimachines/node_modules/

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mini Machines — Host</title>
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <!-- HUD overlay -->
+  <div id="hud">
+    <div id="topBar">
+      <div class="brand">MINI MACHINES</div>
+      <div id="phaseTag" class="phase-tag">LOBBY</div>
+      <div id="timerTag" class="timer-tag"></div>
+    </div>
+
+    <!-- sponsor strip -->
+    <div id="sponsors" class="sponsors">
+      <span class="spon">ai&amp;</span>
+      <span class="spon">Moonshot</span>
+      <span class="spon">Tokyu Corporation</span>
+    </div>
+
+    <!-- live leaderboard (right) -->
+    <div id="leaderboard" class="leaderboard"></div>
+
+    <!-- players online (left) -->
+    <div id="playersOnline" class="players-online">0 players</div>
+
+    <!-- host controls (bottom) -->
+    <div id="controls" class="controls">
+      <button id="startBtn" class="ctrl-btn start">START</button>
+      <button id="pauseBtn" class="ctrl-btn">PAUSE</button>
+      <button id="endBtn" class="ctrl-btn danger">END</button>
+      <span class="ctrl-hint">Space = start/pause · Esc = end</span>
+    </div>
+
+    <!-- lobby card: QR + join url -->
+    <div id="lobbyCard" class="lobby-card">
+      <div class="lobby-title">JOIN THE BATTLE</div>
+      <img id="qrImg" class="qr" alt="QR code">
+      <div id="joinUrl" class="join-url"></div>
+      <div class="lobby-sub">Scan or open this URL on your phone. Same Wi-Fi.</div>
+      <div id="waiting" class="waiting">Waiting for players…</div>
+    </div>
+
+    <!-- round result -->
+    <div id="resultCard" class="result-card hidden">
+      <div id="resultTitle" class="result-title">ROUND OVER</div>
+      <div id="resultRows" class="result-rows"></div>
+      <div id="resultMvp" class="result-mvp"></div>
+    </div>
+  </div>
+
+  <script type="importmap">
+  { "imports": { "three": "./three.module.min.js" } }
+  </script>
+  <script src="/happyfuntimes/dist/hft.js"></script>
+  <script type="module" src="game.js"></script>
+</body>
+</html>

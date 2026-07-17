@@ -1,0 +1,80 @@
+{
+  "name": "happyfuntimes",
+  "description": "happyfuntimes massively local multiplayer electron framework",
+  "version": "0.2.5",
+  "scripts": {
+    "start": "node start.js",
+    "check": "grunt eslint",
+    "build": "webpack --config src/hft.config.js",
+    "builddocs": "grunt",
+    "test": "mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greggman/HappyFunTimes.git"
+  },
+  "main": "start.js",
+  "files": [
+    "server",
+    "lib",
+    "dist",
+    "hft-support"
+  ],
+  "keywords": [
+    "happyfuntimes",
+    "hft",
+    "games",
+    "multiplayer"
+  ],
+  "author": "Gregg Tavares",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/greggman/HappyFunTimes/issues"
+  },
+  "homepage": "https://github.com/greggman/HappyFunTimes#readme",
+  "dependencies": {
+    "debug": "0.7.4",
+    "express": "^4.4.1",
+    "mime": "1.2.11",
+    "native-dns": "^0.7.0",
+    "optionator": "^0.4.0",
+    "promise": "^7.1.1",
+    "rest-url": "0.0.4",
+    "sprintf-js": "0.0.7",
+    "ws": "^5.1.1"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.5",
+    "electron": "^2.0.1",
+    "eslint": "^3.10.2",
+    "eslint-plugin-google-camelcase": "0.0.1",
+    "eslint-plugin-one-variable-per-var": "0.0.1",
+    "eslint-plugin-optional-comma-spacing": "0.0.3",
+    "eslint-plugin-require-trailing-comma": "0.0.1",
+    "feed": "^0.2.6",
+    "glob": "^5.0.5",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^10.0.0",
+    "grunt-jsdoc": "^2.1.0",
+    "grunt-sass": "^1.2.1",
+    "handlebars": "^4.0.11",
+    "hanson": "^1.2.0",
+    "inmemfilecache": "0.0.5",
+    "jquery": "^3.1.1",
+    "marked": "^0.3.3",
+    "mocha": "^3.1.2",
+    "request": "^2.40.0",
+    "requirejs": "^2.3.2",
+    "should": "^7.0.2",
+    "sitemap": "^0.8.1",
+    "tmp": "0.0.30",
+    "webpack": "^1.13.1",
+    "webpack-load-plugins": "^0.1.2",
+    "xml2js": "^0.4.8"
+  }
+}
