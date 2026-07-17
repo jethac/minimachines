@@ -18,6 +18,8 @@ Then:
 
 To let players join from anywhere over the internet, set `PUBLIC_URL` to the externally-reachable URL:
 
+The public production address is **https://mm.jethachan.net**. It runs in a managed Cloudflare Container behind a Worker, so the Node relay and its WebSocket connections do not depend on a local computer.
+
 ```bash
 # Direct HTTPS (self-signed or Let's Encrypt cert)
 PUBLIC_URL=https://mini.example.com \

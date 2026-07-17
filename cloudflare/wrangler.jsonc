@@ -1,0 +1,39 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "minimachines",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-07-17",
+  "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "mm.jethachan.net",
+      "custom_domain": true
+    }
+  ],
+  "containers": [
+    {
+      "class_name": "MiniMachinesContainer",
+      "image": "./Dockerfile",
+      "image_build_context": "..",
+      "max_instances": 1,
+      "instance_type": "basic",
+      "constraints": {
+        "regions": ["APAC"]
+      }
+    }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "MINI_MACHINES",
+        "class_name": "MiniMachinesContainer"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["MiniMachinesContainer"]
+    }
+  ]
+}
