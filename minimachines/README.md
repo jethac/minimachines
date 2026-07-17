@@ -2,6 +2,10 @@
 
 Mario-Kart-style balloon battle for live events. Phones become controllers via HappyFunTimes. Three.js renders the arena on a big screen. Works on **LAN** (default) or **the internet**.
 
+The accepted next-generation networking direction is documented in
+[ARCHITECTURE.md](ARCHITECTURE.md): browser-hosted simulation, direct WebRTC
+controller connections, and a free-tier signalling service only.
+
 ## Quick Start (LAN)
 
 ```bash
